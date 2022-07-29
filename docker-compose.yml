@@ -3,7 +3,6 @@ services:
     build: 
       context: ./app
       dockerfile: Dockerfile.production
-    image: koshkarik/devops-for-programmers-project-lvl1:latest
     command: npm test
     volumes:
       - ./app/.env.example:/app/.env
