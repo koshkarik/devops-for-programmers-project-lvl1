@@ -3,7 +3,7 @@ services:
     build: 
       context: ./app
       dockerfile: Dockerfile.production
-    command: bash -c 'sleep 3 && npm start'
+    command: bash -c 'sleep 3 && npm test'
     volumes:
       - ./app/.env.example:/app/.env
     depends_on:
