@@ -19,4 +19,4 @@ services:
       - 8080:8080
     volumes:
       - ./app:/app
-    command: npm run dev
+    command: bash -c 'sleep 3 && npm start' 
