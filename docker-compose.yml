@@ -3,9 +3,9 @@ services:
     build: 
       context: ./app
       dockerfile: Dockerfile.production
+    env_file:
+      - ./app/.env.example
     image: koshkarik/devops-for-programmers-project-lvl1:latest
-    volumes:
-      - ./app/.env.example:/app/.env
     command: npm test
     depends_on:
       - db
