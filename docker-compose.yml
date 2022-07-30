@@ -1,7 +1,7 @@
 services:
   app:
     build: 
-      context: ./app
+      context: .
       dockerfile: Dockerfile.production
     command: bash -c 'sleep 3 && npm test'
     volumes:
