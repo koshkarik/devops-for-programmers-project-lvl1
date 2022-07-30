@@ -11,10 +11,10 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: tests
-        run: docker-compose -f docker-compose.yml up --abort-on-container-exit
+        run: make ci 
 
       - name: build
-        run: docker-compose -f docker-compose.yml build app 
+        run: make build 
 
       - name: docker login
         env:
@@ -23,4 +23,4 @@ jobs:
         run: docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
 
       - name: push
-        run: docker-compose -f docker-compose.yml push app 
+        run: make push 

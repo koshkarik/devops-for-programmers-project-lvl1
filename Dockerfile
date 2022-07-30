@@ -2,8 +2,8 @@ FROM node:14.18.1-slim
 
 WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
+COPY app/package.json .
+COPY app/package-lock.json .
 
 RUN npm ci
 
