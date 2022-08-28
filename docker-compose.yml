@@ -10,6 +10,9 @@ services:
       - ./app/.env.example:/app/.env
     depends_on:
       - db
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
   db:
     image: postgres:latest
     environment:
