@@ -8,11 +8,9 @@ services:
     command: bash -c 'sleep 3 && npm test'
     volumes:
       - ./app/.env.example:/app/.env
+      - ./.env.example:/.env
     depends_on:
       - db
-    environment:
-      POSTGRES_USER: ${DATABASE_USERNAME}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
   db:
     image: postgres:latest
     env_file:
