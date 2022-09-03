@@ -11,4 +11,4 @@ push:
 	docker-compose -f docker-compose.yml push app
 
 start:
-	docker compose up
+	make cp-env; docker compose up
