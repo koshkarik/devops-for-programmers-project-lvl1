@@ -2,8 +2,14 @@
 
 [![Actions Status](https://github.com/koshkarik/devops-for-programmers-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/koshkarik/devops-for-programmers-project-lvl1/actions)
 
-### Test and build
+### Requirements
+- OS: OS X, Linux
+- Docker: required
 
-![test and push actions](https://github.com/koshkarik/devops-for-programmers-project-lvl1/actions/workflows/push.yml/badge.svg)
 
-[Docker-hub](https://hub.docker.com/repository/docker/koshkarik/devops-for-programmers-project-lvl1)
+[Link to docker image](https://hub.docker.com/repository/docker/koshkarik/devops-for-programmers-project-lvl1)
+
+#### Makefile
+ci (runs tests)
+start (start service)
+push (push current version to docker hub and tag it latest)
